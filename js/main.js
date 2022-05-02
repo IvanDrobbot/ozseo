@@ -4,6 +4,7 @@ const totalCount = document.querySelector(".total");
 const modal = document.querySelector(".modal-window");
 const openBtn = document.querySelectorAll(".open-modal");
 const closeBtn = document.querySelectorAll(".close-modal");
+const fady = document.querySelectorAll(".fady");
 
 let range = document.querySelector(".slide__range-count");
 
@@ -44,3 +45,27 @@ initOzslider({
     prevBtn: '.feed-prev'
 });
 
+
+
+function isPartiallyVisible(el) {
+    var elementBoundary = el.getBoundingClientRect();
+ 
+    var top = elementBoundary.top;
+    var bottom = elementBoundary.bottom;
+    var height = elementBoundary.height;
+ 
+    return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+}
+
+function addFade(){
+    fady.forEach(element => {
+        if(isPartiallyVisible(element)){
+            if(!element.classList.contains("faded")){
+                element.classList.add("faded");
+            };
+        };
+    });
+}
+
+document.addEventListener("scroll", addFade);
+    

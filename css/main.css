@@ -1,3 +1,39 @@
+@keyframes fade-top {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.fade-top.faded {
+  animation: fade-top 2s;
+}
+
+.fade-left.faded {
+  animation: fade-left 2s;
+}
+
+.fade-bottom.faded {
+  animation: fade-bottom 2s;
+}
+
 :root {
   font-size: 17px;
   scroll-behavior: smooth;
@@ -43,6 +79,17 @@ button {
 
 ul {
   list-style: none;
+}
+
+.fady {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 2s ease-in-out;
+}
+
+.fady.faded {
+  opacity: 1;
+  visibility: visible;
 }
 
 .container {
