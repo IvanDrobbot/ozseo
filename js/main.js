@@ -4,9 +4,15 @@ const totalCount = document.querySelector(".total");
 const modal = document.querySelector(".modal-window");
 const openBtn = document.querySelectorAll(".open-modal");
 const closeBtn = document.querySelectorAll(".close-modal");
-const fady = document.querySelectorAll(".fady");
+const fady = [
+    ...document.querySelectorAll(".fady"), 
+    ...document.querySelectorAll(".fady-each")
+];
 
-let range = document.querySelector(".slide__range-count");
+let range = document.querySelector(".main__slide__range-count");
+
+
+
 
 burger.addEventListener("click", () => {
     burger.classList.toggle("open");
@@ -25,9 +31,9 @@ closeBtn.forEach(e => {
 });
 
 initOzslider({
-    slider: '.slider',
-    slide: '.slide',
-    sliderTrack: '.slider-track',
+    slider: '.main__slider',
+    slide: '.main__slide',
+    sliderTrack: '.main__slider-track',
     nextBtn: '.next',
     prevBtn: '.prev',
     current: '.current',
@@ -59,11 +65,33 @@ function isPartiallyVisible(el) {
 
 function addFade(){
     fady.forEach(element => {
-        if(isPartiallyVisible(element)){
-            if(!element.classList.contains("faded")){
-                element.classList.add("faded");
+        if(element.classList.contains("fady-each")){
+            if(isPartiallyVisible(element)){
+                let childs = element.children;
+
+                function faded(i = 0, l = childs.length) {
+                    if(i == l) return;
+
+                    if(!childs[i].classList.contains("faded")){
+                        childs[i].classList.add("faded");
+                        childs[i].classList.add("fade-" + element.dataset.fade);
+                    };
+
+                    i++;
+
+                    setTimeout(faded, 250, i);
+                };
+
+                faded();
+            }
+        }
+        else if(element.classList.contains("fady")){
+            if(isPartiallyVisible(element)){
+                if(!element.classList.contains("faded")){
+                    element.classList.add("faded");
+                };
             };
-        };
+        }
     });
 }
 
