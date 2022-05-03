@@ -69,6 +69,14 @@ function addFade(){
         if(element.classList.contains("fady-each")){
             if(isPartiallyVisible(element)){
                 let childs = element.children;
+                let time;
+
+                if(element.dataset.fadetime != undefined){
+                    time = parseInt(element.dataset.fadetime);
+                }
+                else{
+                    time = 250;
+                }
 
                 function faded(i = 0, l = childs.length) {
                     if(i == l) return;
@@ -80,7 +88,7 @@ function addFade(){
 
                     i++;
 
-                    setTimeout(faded, 250, i);
+                    setTimeout(faded, time, i);
                 };
 
                 faded();
