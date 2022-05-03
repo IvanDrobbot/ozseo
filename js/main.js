@@ -13,47 +13,6 @@ const fady = [
 let range = document.querySelector(".main__slide__range-count");
 
 
-
-
-burger.addEventListener("click", () => {
-    burger.classList.toggle("open");
-});
-
-openBtn.forEach(e => {
-    e.addEventListener("click", () => {
-        modal.classList.toggle("open");
-    })
-});
-
-closeBtn.forEach(e => {
-    e.addEventListener("click", () => {
-        modal.classList.toggle("open");
-    })
-});
-
-initOzslider({
-    slider: '.main__slider',
-    slide: '.main__slide',
-    sliderTrack: '.main__slider-track',
-    nextBtn: '.next',
-    prevBtn: '.prev',
-    current: '.current',
-    total: '.total',
-    fun: () => {
-        range.style.width = 100 / (parseInt(totalCount.innerHTML) / parseInt(currentCount.innerHTML))  + '%';
-    }
-}, true, true);
-
-initOzslider({
-    slider: '.feed',
-    slide: '.feed__slide',
-    sliderTrack: '.feed__container',
-    nextBtn: '.feed-next',
-    prevBtn: '.feed-prev'
-});
-
-
-
 function isPartiallyVisible(el) {
     var elementBoundary = el.getBoundingClientRect();
  
@@ -104,4 +63,43 @@ function addFade(){
     });
 }
 
+initOzslider({
+    slider: '.main__slider',
+    slide: '.main__slide',
+    sliderTrack: '.main__slider-track',
+    nextBtn: '.next',
+    prevBtn: '.prev',
+    current: '.current',
+    total: '.total',
+    fun: () => {
+        range.style.width = 100 / (parseInt(totalCount.innerHTML) / parseInt(currentCount.innerHTML))  + '%';
+    }
+}, true, true);
+
+initOzslider({
+    slider: '.feed',
+    slide: '.feed__slide',
+    sliderTrack: '.feed__container',
+    nextBtn: '.feed-next',
+    prevBtn: '.feed-prev'
+});
+
+
+
 document.addEventListener("scroll", addFade);
+
+burger.addEventListener("click", () => {
+    burger.classList.toggle("open");
+});
+
+openBtn.forEach(e => {
+    e.addEventListener("click", () => {
+        modal.classList.toggle("open");
+    })
+});
+
+closeBtn.forEach(e => {
+    e.addEventListener("click", () => {
+        modal.classList.toggle("open");
+    })
+});
