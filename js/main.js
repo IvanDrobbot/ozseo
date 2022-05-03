@@ -4,6 +4,7 @@ const totalCount = document.querySelector(".total");
 const modal = document.querySelector(".modal-window");
 const openBtn = document.querySelectorAll(".open-modal");
 const closeBtn = document.querySelectorAll(".close-modal");
+
 const fady = [
     ...document.querySelectorAll(".fady"), 
     ...document.querySelectorAll(".fady-each")
@@ -96,4 +97,3 @@ function addFade(){
 }
 
 document.addEventListener("scroll", addFade);
-    
