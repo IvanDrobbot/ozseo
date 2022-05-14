@@ -12,6 +12,11 @@ const checkError2 = document.querySelector(".check-error2");
 const checkBtn2 = document.querySelector(".check-btn2");
 const checkInput2 = document.querySelector(".check-input2");
 const checkForm2 = document.querySelector(".check-form2");
+const checker3 = document.querySelector("#checker3");
+const checkError3 = document.querySelector(".check-error3");
+const checkBtn3 = document.querySelector(".check-btn3");
+const checkInput3 = document.querySelector(".check-input3");
+const checkForm3 = document.querySelector(".check-form3");
 const widget = document.querySelector(".widget");
 
 
@@ -24,11 +29,14 @@ const openWidget = document.querySelectorAll(".open-widget");
 const closeWidget = document.querySelectorAll(".close-widget");
 const exAutoHeight = document.querySelectorAll(".ex-auto");
 const prodAutoHeight = document.querySelectorAll(".prod-auto");
+const footerAutoHeight = document.querySelectorAll(".footer-auto");
 
 
 
 matchHeight(exAutoHeight);
 matchHeight(prodAutoHeight);
+matchHeight(footerAutoHeight);
+
 
 function validateEmail(email){
     return String(email)
@@ -132,6 +140,41 @@ checkBtn2.addEventListener("click", (e) =>{
         checkForm2.submit();
     }
 });
+
+
+checkInput3.addEventListener("input", () => {
+    if(checkInput3.value.length < 17){
+        checkError3.innerHTML = "Введите корректный номер телефона.";
+        
+        if(checkError3.classList.contains("hidden")){
+            checkError3.classList.remove("hidden");
+        }
+    }
+    else{
+        if(!checkError3.classList.contains("hidden")){
+            checkError3.classList.add("hidden");
+        }
+    }
+});
+checkBtn3.addEventListener("mouseover", (e) =>{
+    if(checkInput3.value.length >= 17 && checker3.checked ){
+        if(!checkBtn3.classList.contains("allow")){
+            checkBtn3.classList.add("allow");
+        }
+    }
+    else if(checkBtn3.classList.contains("allow")){
+        checkBtn3.classList.remove("allow");
+    }
+});
+
+checkBtn3.addEventListener("click", (e) =>{
+    e.preventDefault();
+
+    if(checkInput3.value.length >= 17 && checker3.checked){
+        checkForm3.submit();
+    }
+});
+
 
 openWidget.forEach(open => {
     open.addEventListener("click", () => {
