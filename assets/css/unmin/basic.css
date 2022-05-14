@@ -1199,6 +1199,11 @@ textarea.input {
   pointer-events: none;
   font-weight: var(--bold-fw);
 }
+@media (max-width: 767px) {
+  .textbg {
+    display: none;
+  }
+}
 
 .header {
   width: 100%;
@@ -1583,12 +1588,10 @@ textarea.input {
   right: -2rem;
   z-index: -1;
 }
-.main-slider::before, .main-slider::after {
+.main-slider__track::before {
   content: "";
   display: block;
   position: absolute;
-}
-.main-slider::before {
   background: url(../../img/elements/dots1.webp) no-repeat 100%;
   width: 134px;
   height: 122px;
@@ -1596,6 +1599,9 @@ textarea.input {
   left: 1.6rem;
 }
 .main-slider::after {
+  content: "";
+  display: block;
+  position: absolute;
   background-color: #f3f3f3;
   width: 30vw;
   height: 30vw;
@@ -2663,11 +2669,6 @@ textarea.input {
   color: #d9d9d9;
   transform: translateX(-50%);
   z-index: 1;
-}
-@media (max-width: 767px) {
-  .calc__bg {
-    display: none;
-  }
 }
 .calc .round__wrap {
   top: 0;
