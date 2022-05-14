@@ -903,11 +903,11 @@ em {
   flex-wrap: wrap;
   align-content: flex-end;
   height: calc(100vh - 110px);
-  visibility: visible;
   position: absolute;
   bottom: 80px;
   right: 50px;
   opacity: 0;
+  visibility: hidden;
   transition: 0.25s all ease-in-out;
 }
 .widget__icon {
