@@ -8,20 +8,27 @@
     <link rel="shortcut icon" href="assets/img/elements/favicon.webp" type="image/webp">
     <link rel="stylesheet" href="assets/css/min/animate.min.css">
     <link rel="stylesheet" href="assets/css/min/basic.css">
+    <!-- sass --watch src/scss:dist/assets/css/unmin --style=expanded -->
+    <!-- sass --watch dist/assets/css/unmin:dist/assets/css/min --style compressed -->
 </head>
 <body>
     
     <header class="header">
         <div class="container">
             <div class="column header__column easy-container">
-                <a href="#" class="logo header__logo vl-r">
-                    <img src="assets/img/logotype.webp" class="header__logo-img" alt="Ozseo logotype">
-                </a>
-                <div class="col header__des">
+                <div class="logo header__logo">
+                    <a href="#" class="header__logo-link vl-r">
+                        <img src="assets/img/logotype.svg" class="header__logo-img img" alt="Ozseo logotype">
+                    </a>
+                </div>
+                <div class="header__des">
                     <div class="light-title">Оформление и благоустройство городской среды</div>
                 </div>
 
                 <div class="col social header__social">
+                    <a href="#" class="social__element header__social-element">
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" image-rendering="optimizeQuality" viewBox="0 0 512 512" xmlns:v="https://vecta.io/nano"><path d="M456 95.4l-63.3 319s-8.8 22.1-33.2 11.5L212.9 313.7l179.3-161.4c10.3-9.6 3.9-15.4-8.1-8.1L158.3 287.6l-87.1-29.3s-13.7-4.9-15-15.5 15.5-16.4 15.5-16.4L426.8 87S456 74.2 456 95.4z"></path></svg>
+                    </a>
                     <a href="#" class="social__element header__social-element">
                         <svg xmlns="http://www.w3.org/2000/svg"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"></path></svg>
                     </a>
@@ -233,100 +240,103 @@
         </div>
     </div>
     
-    <section class="main-slider container slider">
-        <span class="main-slider__bg">Декóис</span>
-        <div class="slider-track main-slider__track">
-            <div class="slide main-slider__slide">
-                <div class="main-slider__slide-container tertiary-container">
-                    <div class="column main-slider__column">
-                        <div class="col main-slider__first-side">
-                            <img src="assets/img/alley.webp" alt="alley" class="main-slider__img">
-                        </div>
+    <section class="main-slider container">
+        <div class="main-slider__real slider">
+            <span class="main-slider__bg textbg">Декóис</span>
+            <div class="slider-track main-slider__track">
+                <div class="slide main-slider__slide">
+                    <div class="main-slider__slide-container tertiary-container">
+                        <div class="column main-slider__column">
+                            <div class="col main-slider__first-side">
+                                <img src="assets/img/alley.webp" alt="alley" class="main-slider__img img">
+                            </div>
 
-                        <div class="col main-slider__second-side">
-                            <div class="main-slider__section">
-                                <p class="semi-regular-title main-slider__top-title"><em class="main-slider__color">Стильный дизайн</em> городской среды <del class="easy-bold-title default">от 1 дня под ключ</del></p>
-                                <h1><em class="main-slider__color">Благоустройство</em> общественных пространств: от задумки до реализации </h1>
-                                <p class="off-heading-title">Создаем креативные зоны для отдыха</p>
-                                <p class="main-slider__des">Мы умеем восхищать — убедитесь сами, посмотрев наш каталог</p>
+                            <div class="col main-slider__second-side">
+                                <div class="main-slider__section off-head">
+                                    <p class="main-slider__top-title"><em class="main-slider__color">Стильный дизайн</em> городской среды <del class="default"><strong> от 1 дня под ключ</strong></del></p>
+                                    <h1><em class="main-slider__color">Благоустройство</em> общественных пространств: от задумки до реализации </h1>
+                                    <p class="off-heading-title">Создаем креативные зоны для отдыха</p>
+                                    <p class="main-slider__des">Мы умеем восхищать — убедитесь сами, посмотрев наш каталог</p>
+                                </div>
+                                
+                                <div class="main-slider__btn">
+                                    <a href="#" class="main-slider__btn primary-btn pmx">
+                                        <span>Подробнее</span>
+                                    </a>
+                                </div>
                             </div>
                             
-                            <div class="main-slider__btn">
-                                <a href="#" class="main-slider__btn main-slider__more primary-btn pmx">
-                                    <span class="linked-title">Подробнее</span>
-                                </a>
-                            </div>
                         </div>
-                        
+                    </div>
+                </div>
+                <div class="slide main-slider__slide">
+                    <div class="main-slider__slide-container tertiary-container">
+                        <div class="column main-slider__column">
+                            <div class="col main-slider__first-side">
+                                <img src="assets/img/bear.webp" alt="alley" class="main-slider__img img">
+                            </div>
+
+                            <div class="col main-slider__second-side">
+                                <div class="main-slider__section off-head">
+                                    <p class="main-slider__top-title">Создаем живые скульптуры <del class="default"><strong> за 24 часа</strong></del></p>
+                                    <h2><em class="main-slider__color">Фигуры топиари</em>  по уникальной технологии всесезонности</h2>
+                                    <p class="off-heading-title">Держат форму круглый год</p>
+                                    <p class="main-slider__des">Предложим 30+ готовых вариантов или воплотим любую вашу идею</p>
+                                </div>
+                                
+                                <div class="main-slider__btn">
+                                    <a href="#" class="main-slider__btn primary-btn pmx">
+                                        <span class="linked-title">Подробнее</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="slide main-slider__slide">
+                    <div class="main-slider__slide-container tertiary-container">
+                        <div class="column main-slider__column">
+                            <div class="col main-slider__first-side">
+                                <img src="assets/img/bear.webp" alt="alley" class="main-slider__img img">
+                            </div>
+
+                            <div class="col main-slider__second-side">
+                                <div class="main-slider__section off-head">
+                                    <p class="main-slider__top-title">Создаем живые скульптуры <del class="default"><strong> за 24 часа</strong></del></p>
+                                    <h2 class="off-head-title"><em class="main-slider__color">Фигуры топиари</em>  по уникальной технологии всесезонности</h2>
+                                    <p class="off-heading-title">Держат форму круглый год</p>
+                                    <p class="main-slider__des">Предложим 30+ готовых вариантов или воплотим любую вашу идею</p>
+                                </div>
+                                
+                                <div class="main-slider__btn">
+                                    <a href="#" class="main-slider__btn primary-btn pmx">
+                                        <span class="linked-title">Подробнее</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="slide main-slider__slide">
-                <div class="main-slider__slide-container tertiary-container">
-                    <div class="column main-slider__column">
-                        <div class="col main-slider__first-side">
-                            <img src="assets/img/bear.webp" alt="alley" class="main-slider__img">
-                        </div>
-
-                        <div class="col main-slider__second-side">
-                            <div class="main-slider__section">
-                                <p class="semi-regular-title main-slider__top-title">Создаем живые скульптуры <del class="easy-bold-title default">за 24 часа</del></p>
-                                <h2><em class="main-slider__color">Фигуры топиари</em>  по уникальной технологии всесезонности</h2>
-                                <p class="off-heading-title">Держат форму круглый год</p>
-                                <p class="main-slider__des">Предложим 30+ готовых вариантов или воплотим любую вашу идею</p>
-                            </div>
-                            
-                            <div class="main-slider__btn">
-                                <a href="#" class="main-slider__btn primary-btn pmx">
-                                    <span class="linked-title">Подробнее</span>
-                                </a>
-                            </div>
-                        </div>
-                        
-                    </div>
+            <div class="main-slider__control">
+                <span class="main-slider__current">01</span>
+                <div class="main-slider__range">
+                    <span class="main-slider__range-fill"></span>
                 </div>
-            </div>
-            <div class="slide main-slider__slide">
-                <div class="main-slider__slide-container tertiary-container">
-                    <div class="column main-slider__column">
-                        <div class="col main-slider__first-side">
-                            <img src="assets/img/bear.webp" alt="alley" class="main-slider__img">
-                        </div>
-
-                        <div class="col main-slider__second-side">
-                            <div class="main-slider__section">
-                                <p class="semi-regular-title main-slider__top-title">Создаем живые скульптуры <del class="easy-bold-title default">за 24 часа</del></p>
-                                <h2><em class="main-slider__color">Фигуры топиари</em>  по уникальной технологии всесезонности</h2>
-                                <p class="off-heading-title">Держат форму круглый год</p>
-                                <p class="main-slider__des">Предложим 30+ готовых вариантов или воплотим любую вашу идею</p>
-                            </div>
-                            
-                            <div class="main-slider__btn">
-                                <a href="#" class="main-slider__btn primary-btn pmx">
-                                    <span class="linked-title">Подробнее</span>
-                                </a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+                <span class="main-slider__total">03</span>
+                <div class="main-slider__next"></div>
+                <div class="prev"></div>
             </div>
         </div>
-        <div class="main-slider__control">
-            <span class="main-slider__current regular-bold-title">01</span>
-            <div class="main-slider__range">
-                <span class="main-slider__range-fill"></span>
-            </div>
-            <span class="main-slider__total regular-bold-title">03</span>
-            <div class="main-slider__next"></div>
-            <div class="prev"></div>
-        </div>
+            
     </section>
 
     <section class="achives">
         <div class="container-fluid achives__con">
             <div class="row">
-                <div class="achives__item animate__fadeInDown wow" data-wow-delay="100ms">
+                <div class="col col-ml achives__item animate__fadeInDown wow" data-wow-delay="100ms">
                     <div class="achives__wrap">
                         <div class="achives__icon">
                             <img src="assets/img/achive1.webp" alt="achive" class="achives__img">
@@ -335,7 +345,7 @@
                         <p class="achives__des">наименований продукции</p>
                     </div>
                 </div>
-                <div class="achives__item animate__fadeInDown wow" data-wow-delay="200ms">
+                <div class="col col-ml achives__item animate__fadeInDown wow" data-wow-delay="200ms">
                     <div class="achives__wrap">
                         <div class="achives__icon">
                             <img src="assets/img/achive2.webp" alt="achive" class="achives__img">
@@ -344,7 +354,7 @@
                         <p class="achives__des">квадратных метров складских помещений с изделиями в наличии</p>
                     </div>
                 </div>
-                <div class="achives__item animate__fadeInDown wow" data-wow-delay="300ms">
+                <div class="col col-ml achives__item animate__fadeInDown wow" data-wow-delay="300ms">
                     <div class="achives__wrap">
                         <div class="achives__icon">
                             <img src="assets/img/achive3.webp" alt="achive" class="achives__img">
@@ -353,7 +363,7 @@
                         <p class="achives__des">успешной работы на рынке</p>
                     </div>
                 </div>
-                <div class="achives__item animate__fadeInDown wow" data-wow-delay="400ms">
+                <div class="col col-ml achives__item animate__fadeInDown wow" data-wow-delay="400ms">
                     <div class="achives__wrap">
                         <div class="achives__icon">
                             <img src="assets/img/achive4.webp" alt="achive" class="achives__img">
@@ -362,7 +372,7 @@
                         <p class="achives__des">собственных производства</p>
                     </div>
                 </div>
-                <div class="achives__item animate__fadeInDown wow" data-wow-delay="500ms">
+                <div class="col col-ml achives__item animate__fadeInDown wow" data-wow-delay="500ms">
                     <div class="achives__wrap">
                         <div class="achives__icon">
                             <img src="assets/img/achive5.webp" alt="achive" class="achives__img">
@@ -371,7 +381,7 @@
                         <p class="achives__des">реализованных проектов</p>
                     </div>
                 </div>
-                <div class="achives__item animate__fadeInDown wow" data-wow-delay="600ms">
+                <div class="col col-ml achives__item animate__fadeInDown wow" data-wow-delay="600ms">
                     <div class="achives__wrap">
                         <div class="achives__icon">
                             <img src="assets/img/achive6.webp" alt="achive" class="achives__img">
@@ -386,14 +396,14 @@
 
 
     <section class="description container">
-        <div class="description__arrow">
-            <img src="assets/img/elements/xlines3.webp" alt="xlines" class="description__arrow-img description__img">
+        <div class="description__arrow img-wrap">
+            <img src="assets/img/elements/xlines3.webp" alt="xlines" class="description__arrow-img img">
         </div>
         <div class="container-fluid description__container">
-            <div class="description__img-wrap">
-                <img src="assets/img/elements/dots2.webp" alt="dots" class="dots2 description__img">
+            <div class="description__img-wrap img-wrap">
+                <img src="assets/img/elements/dots2.webp" alt="dots" class="dots2 description__img img">
                 <div class="dog description__dog"></div>
-                <img src="assets/img/dog.webp" alt="dog.webp" class="dog-img description__img">
+                <img src="assets/img/dog.webp" alt="dog.webp" class="dog-img description__img img">
             </div>
 
             <div class="row">
@@ -409,7 +419,7 @@
                         <p class="description__des">
                             Мы лучшие в сфере декоративного оформления от идеи до реализации, воплощаем в жизнь захватывающие дух концепции дизайна, создающие волшебную атмосферу
                         </p>
-                        <a href="#" class="primary-btn pr description__btn"><span>Смотреть</span></a>
+                        <a href="#" class="btn primary-btn pm description__btn"><span>Смотреть</span></a>
                     </div>
                 </div>
             </div>
@@ -418,17 +428,17 @@
 
     <section class="ezkiz conatiner">
         <div class="ezkiz__wrap">
-            <div class="ezkiz__img-wrap">
-                <img src="assets/img/three.webp" alt="treel" class="ezkiz__treel ezkiz__img">
-                <img src="assets/img/buklet.webp" alt="buklet" class="ezkiz__buklet ezkiz__img">
+            <div class="ezkiz__img-wrap img-wrap">
+                <img src="assets/img/three.webp" alt="treel" class="ezkiz__treel ezkiz__img img">
+                <img src="assets/img/buklet.webp" alt="buklet" class="ezkiz__buklet ezkiz__img img">
             </div>
             <div class="ezkiz__block">
                 <p class="thin-title ezkiz__title">
-                    Получите <del>бесплатный</del>  эскиз оформления городской среды <em>за 1 день</em>
+                    Получите <del>бесплатный</del> эскиз оформления городской среды <em>за 1 день</em>
                 </p>
                 <p class="ezkiz__des">Создаем индивидуальный проект под вас и показываем, как он будет выглядеть визуально</p>
 
-                <a href="#" class="primary-btn blind-btn pr ezkiz__btn animate__fadeInUp wow">
+                <a href="#" class="primary-btn blind-btn pm ezkiz__btn animate__fadeInUp wow">
                     <span class="blind__element"></span>
                     <span>Получить эскиз</span>
                 </a>
@@ -444,63 +454,79 @@
         <div class="container">
             <div class="container-fluid">
                 <div class="gallery__tabs portfolio__tabs">
-                    <h2 class="head-title gallery__title portfolio__title">Портфолио</h2>
+                    <h2 class="gallery__title">Портфолио</h2>
                 </div>
             </div>
             <div class="legacy-container">
                 <div class="column gallery__btns portfolio__btns">
-                    <div class="gallery__btn prtfolio__btn primary-btn active"><span>Оформление</span></div>
-                    <div class="gallery__btn prtfolio__btn primary-btn secondared"><span>Благоустройство</span></div>
+                    <div class="gallery__btn prtfolio__btn primary-btn pms active"><span>Оформление</span></div>
+                    <div class="gallery__btn prtfolio__btn primary-btn pms secondared"><span>Благоустройство</span></div>
                 </div>
             </div>
             
             <div class="gallery__content portfolio__content hes-gallery">
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi1.webp);"></div>
                     <img src="assets/img/gi1.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi2.webp);"></div>
                     <img src="assets/img/gi2.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi3.webp);"></div>
                     <img src="assets/img/gi3.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi4.webp);"></div>
                     <img src="assets/img/gi4.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi5.webp);"></div>
                     <img src="assets/img/gi5.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi6.webp);"></div>
                     <img src="assets/img/gi6.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi7.webp);"></div>
                     <img src="assets/img/gi7.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi8.webp);"></div>
                     <img src="assets/img/gi8.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi9.webp);"></div>
                     <img src="assets/img/gi9.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi10.webp);"></div>
                     <img src="assets/img/gi10.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi11.webp);"></div>
                     <img src="assets/img/gi11.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi12.webp);"></div>
                     <img src="assets/img/gi12.webp" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi13.webp);"></div>
                     <img src="assets/img/gi13.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi14.webp);"></div>
                     <img src="assets/img/gi14.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi15.webp);"></div>
                     <img src="assets/img/gi15.webp"  data-subtext="Описание данного изображения"alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
                 <div class="gallery__item portfolio__item animate__fadeInUp wow" data-subtext="Описание данного изображения">
+                    <div class="gallery__link portfolio__link" style="background-image: url(assets/img/gi16.webp);"></div>
                     <img src="assets/img/gi16.webp" data-subtext="Описание данного изображения" alt="portfolio-item" class="gallery__img portfolio__img">
                 </div>
             </div>
@@ -511,28 +537,28 @@
     <section class="ex">
         <div class="container-fluid">
             <div class="row ex__row">
-                <div class="col ex__item">
-                    <div class="ex__text">
-                        <p class="small-head-title ex__title">Праздничное оформление</p>
-                        <p class="ex__des semi-regular-title"><del class="default bold-title"> Более 120 </del>выполненных проектов</p>
+                <div class="col col-sm ex__item">
+                    <div class="ex__text ex-auto">
+                        <p class="ex__title"><strong>Праздничное оформление</strong></p>
+                        <p class="ex__des"><del class="default"><strong> Более 120 </strong></del>выполненных проектов</p>
                     </div>
                     <div class="ex__img-block animate__fadeInUp wow">
-                        <img src="assets/img/ex.webp" alt="Ex" class="ex__img">
+                        <img src="assets/img/ex.webp" alt="Ex" class="ex__img img">
                     </div>
                     <div class="ex__btn-wrap animate__fadeInDown wow">
-                        <a href="#" class="ex__btn primary-btn pr"><span>Подробнее</span></a>
+                        <a href="#" class="btn ex__btn primary-btn pmbg"><span>Подробнее</span></a>
                     </div>
                 </div>
-                <div class="col ex__item">
-                    <div class="ex__text">
-                        <p class="small-head-title ex__title">Благоустройство комфортной городской среды</p>
-                        <p class="ex__des semi-regular-title"><del class="default bold-title"> 37 </del>реализованных проектов за год</p>
+                <div class="col col-sm ex__item">
+                    <div class="ex__text ex-auto">
+                        <p class="ex__title"><strong>Благоустройство комфортной городской среды</strong></p>
+                        <p class="ex__des"><del class="default"><strong> 37 </strong></del>реализованных проектов за год</p>
                     </div>
                     <div class="ex__img-block animate__fadeInUp wow">
-                        <img src="assets/img/ex2.webp" alt="Ex" class="ex__img">
+                        <img src="assets/img/ex2.webp" alt="Ex" class="ex__img img">
                     </div>
                     <div class="ex__btn-wrap animate__fadeInDown wow">
-                        <a href="#" class="ex__btn primary-btn secondared pr"><span>Подробнее</span></a>
+                        <a href="#" class="btn ex__btn primary-btn secondared pmbg"><span>Подробнее</span></a>
                     </div>
                 </div>
             </div>
@@ -540,52 +566,50 @@
     </section>
 
     <section class="steps">
-        <div class="steps__float">
-            <img src="assets/img/elements/xlines4.webp" alt="arrow" class="steps__float-img step-line1">
+        <div class="steps__float img-wrap">
+            <img src="assets/img/elements/xlines4.webp" alt="arrow" class="steps__float-img step-line1 img">
             <span class="steps__bg">Декóис</span>
-            <img src="assets/img/elements/xlines5.webp" alt="arrow" class="steps__float-img step-line2">
+            <img src="assets/img/elements/xlines5.webp" alt="arrow" class="steps__float-img step-line2 img">
         </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col steps__column">
                     <div class="steps__text">
-                        <h2 class="steps__title thin-title"><em class="bold-title"> 3 шага </em> от заказа до реализации</h2>
-                        <div class="steps__des semi-regular-title">
-                            <p class="steps__des-item">Полное управление проектом, закрепляем за вами персонального менеджера. </p>
-                            <p class="steps__des-item">Берем на себя <del class="italic bold-title"> ВСЕ </del>хлопоты по организации проекта</p>
-                        </div>
+                        <h2 class="steps__title"><em class="steps__color">3 шага </em> от заказа до реализации</h2>
+                        <p class="steps__des">Полное управление проектом, закрепляем за вами персонального менеджера. </p>
+                        <p class="steps__des italic">Берем на себя <del><strong> ВСЕ </strong></del> хлопоты по организации проекта</p>
                     </div>
                 </div>
             </div>
             <div class="row steps__list">
-                <div class="col steps__item animate__fadeInLeft wow" data-wow-delay="100ms">
+                <div class="col col-md steps__item animate__fadeInLeft wow" data-wow-delay="100ms">
                     <div class="steps__step">
                         <div class="steps__img-wrap">
                             <span class="num-step">1</span>
                             <img src="assets/img/step1.webp" alt="step" class="steps__img">
                         </div>
-                        <p class="steps__heading secondary-title">Заявка</p>
-                        <p class="steps__sub semi-regular-title">Создание эскиза и согласование с клиентом</p>
+                        <p class="steps__heading heading-title">Заявка</p>
+                        <p class="steps__sub">Создание эскиза и согласование с клиентом</p>
                     </div>
                 </div>
-                <div class="col steps__item animate__fadeInLeft wow" data-wow-delay="200ms">
+                <div class="col col-md steps__item animate__fadeInLeft wow" data-wow-delay="200ms">
                     <div class="steps__step">
                         <div class="steps__img-wrap">
                             <span class="num-step">2</span>
                             <img src="assets/img/step2.webp" alt="step" class="steps__img">
                         </div>
-                        <p class="steps__heading secondary-title">Проектирование</p>
-                        <p class="steps__sub semi-regular-title">Изготовление декораций и конструкций на собственных производственных мощностях</p>
+                        <p class="steps__heading heading-title">Проектирование</p>
+                        <p class="steps__sub">Изготовление декораций и конструкций на собственных производственных мощностях</p>
                     </div>
                 </div>
-                <div class="col steps__item animate__fadeInLeft wow" data-wow-delay="300ms">
+                <div class="col col-md steps__item animate__fadeInLeft wow" data-wow-delay="300ms">
                     <div class="steps__step">
                         <div class="steps__img-wrap">
                             <span class="num-step">3</span>
                             <img src="assets/img/step3.webp" alt="step" class="steps__img">
                         </div>
-                        <p class="steps__heading secondary-title">Монтаж</p>
-                        <p class="steps__sub semi-regular-title">Гарантийное обслуживание и последующий демонтаж конструкций</p>
+                        <p class="steps__heading heading-title">Монтаж</p>
+                        <p class="steps__sub">Гарантийное обслуживание и последующий демонтаж конструкций</p>
                     </div>
                 </div>
             </div>
@@ -596,40 +620,40 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <p class="thin-title prod__title">Собственное <del class="default bold-title">производство </del></p>
+                    <h2 class="prod__title">Собственное <del><strong> производство </strong></del></h2>
                 </div>
             </div>
             <div class="row prod__list">
-                    <div class="col prod__item animate__fadeInUp wow">
+                    <div class="col col-md prod__item animate__fadeInUp wow">
                         <div class="prod__product">
-                            <div class="prod__img-wrap">
-                                <img src="assets/img/skameyka.webp" alt="skameyka" class="prod__img">
+                            <div class="prod__img-wrap prod-auto">
+                                <img src="assets/img/skameyka.webp" alt="skameyka" class="prod__img img">
                             </div>
-                            <p class="prod__heading secondary-title">Производство декораций от 1 дня</p>
+                            <p class="prod__heading">Производство декораций от 1 дня</p>
                             <p class="prod__sub">Полный цикл производства от разработки идеи до монтажа и реконструкции</p>
                         </div>
                     </div>
-                    <div class="col prod__item animate__fadeInUp wow">
+                    <div class="col col-md prod__item animate__fadeInUp wow">
                         <div class="prod__product">
-                            <div class="prod__img-wrap">
+                            <div class="prod__img-wrap prod-auto">
                                 <img src="assets/img/workstation.webp" alt="workstation" class="prod__img">
                             </div>
-                            <p class="prod__heading secondary-title">Авторская студия дизайна</p>
+                            <p class="prod__heading">Авторская студия дизайна</p>
                             <p class="prod__sub">За вами закрепляется собственный дизайнер или команда из дизайнеров</p>
                         </div>
                     </div>
-                    <div class="col prod__item animate__fadeInUp wow">
+                    <div class="col col-md prod__item animate__fadeInUp wow">
                         <div class="prod__product">
-                            <div class="prod__img-wrap">
+                            <div class="prod__img-wrap prod-auto">
                                 <img src="assets/img/pl.webp" alt="pl" class="prod__img">
                             </div>
-                            <p class="prod__heading secondary-title">Изготовление любых видов декораций под заказ</p>
+                            <p class="prod__heading">Изготовление любых видов декораций под заказ</p>
                             <p class="prod__sub">Более 50 видов технологий обработки материалов</p>
                         </div>
                     </div>
             </div>
         </div>
-    </section>
+    </section> 
 
     <section class="calc">
         <div class="container">
@@ -640,21 +664,21 @@
                     <span class="round"></span>
                     <span class="round"></span>
 
-                    <span class="calc__bg">Декóис</span>
+                    <span class="calc__bg textbg">Декóис</span>
                 </div>
-                <div class="calc__img-wrap">
-                    <img src="assets/img/elements/star1.webp" alt="star" class="calc__img calc__star">
-                    <img src="assets/img/elements/xlines1.webp" alt="lines" class="calc__img calc__lines">
-                    <img src="assets/img/sova.webp" alt="sova" class="calc__img calc__sova">
-                    <img src="assets/img/catorigami.webp" alt="catorigami" class="calc__img calc__cat">
+                <div class="calc__img-wrap img-wrap">
+                    <img src="assets/img/elements/star1.webp" alt="star" class="calc__img calc__star img">
+                    <img src="assets/img/elements/xlines1.webp" alt="lines" class="calc__img calc__lines img">
+                    <img src="assets/img/sova.webp" alt="sova" class="calc__img calc__sova img">
+                    <img src="assets/img/catorigami.webp" alt="catorigami" class="calc__img calc__cat img">
                 </div>
                 <div class="calc__text">
-                    <span class="bold-title secondary-title">
+                    <span class="calc__title">
                         Рассчитаем стоимость проекта в течение <em>15 минут</em>
                     </span>
                 </div>
                 <div class="calc__btn-wrap">
-                    <a href="#" class="calc__btn primary-btn blind-btn">
+                    <a href="#" class="btn calc__btn primary-btn blind-btn pmd">
                         <span class="blind__element"></span>
                         <span>Получить эскиз</span>
                     </a>
@@ -664,12 +688,12 @@
     </section>
 
     <section class="feed-slider">
-        <div class="feed-slider__arrow-wrap">
-            <img src="assets/img/elements/xlines2.webp" alt="xlines" class="feed-slider__arrow">
+        <div class="feed-slider__arrow-wrap img-wrap">
+            <img src="assets/img/elements/xlines2.webp" alt="xlines" class="feed-slider__arrow img">
         </div>
         <div class="container-fluid">
             <div class="feed-wrap">
-                <p class="head-title feed-slider__title">Отзывы наших клиентов</p>
+                <h2 class="feed-slider__title">Отзывы наших клиентов</h2>
                 <div class="slider feed-real-slider">
                     <div class="slider-track feed-slider__track">
                         <div class="feed-slider__slide slide">
@@ -680,7 +704,7 @@
                                             <p>МКУ «Комитет рекламы и туризма Администрации г.о. Серпухов Московской области» выражает благодарность и признательность Компании ДЕКОИС за оказанную квалифицированную помощь в подготовке к празднованию Дня Победы 9 мая 2021 года.</p>
                                             <p>Благодарим за безупречное качество и уникальные выгодные предложения. Надеемся на дальнейшее взаимовыгодное сотрудничество!</p>
                                         </p>
-                                        <p class="feed-slider__name bold-title">И.О. Директора Ю.С. Шлейкина</p>
+                                        <p class="feed-slider__name"><strong>И.О. Директора Ю.С. Шлейкина</strong></p>
                                     </div>
                                     <div class="feed-slider__img-side">
                                         <img src="assets/img/feed.webp" alt="feed" class="feed-slider__img">
@@ -696,7 +720,7 @@
                                             <p>МКУ «Комитет рекламы и туризма Администрации г.о. Серпухов Московской области» выражает благодарность и признательность Компании ДЕКОИС за оказанную квалифицированную помощь в подготовке к празднованию Дня Победы 9 мая 2021 года.</p>
                                             <p>Благодарим за безупречное качество и уникальные выгодные предложения. Надеемся на дальнейшее взаимовыгодное сотрудничество!</p>
                                         </p>
-                                        <p class="feed-slider__name bold-title">И.О. Директора Ю.С. Шлейкина</p>
+                                        <p class="feed-slider__name"><strong>И.О. Директора Ю.С. Шлейкина</strong></p>
                                     </div>
                                     <div class="feed-slider__img-side">
                                         <img src="assets/img/feed.webp" alt="feed" class="feed-slider__img">
@@ -714,7 +738,7 @@
         </div>
     </section>
     
-
+    <script src="assets/js/unmin/matchheight.js"></script>
     <script src="assets/js/min/inputmask.min.js"></script>
     <script src="assets/js/min/ozslider.min.js"></script>
     <script src="assets/js/unmin/initSlider.js"></script>
