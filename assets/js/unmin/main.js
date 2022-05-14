@@ -9,6 +9,14 @@ const checkForm = document.querySelector(".check-form");
 
 const openModal = document.querySelectorAll(".open-modal");
 const closeModal = document.querySelectorAll(".close-modal");
+const exAutoHeight = document.querySelectorAll(".ex-auto");
+const prodAutoHeight = document.querySelectorAll(".prod-auto");
+
+
+
+matchHeight(exAutoHeight);
+matchHeight(prodAutoHeight);
+
 
 burger.addEventListener("click", () =>{
     burger.classList.toggle("active");
@@ -58,3 +66,4 @@ checkBtn.addEventListener("click", (e) =>{
         checkForm.submit();
     }
 });
+

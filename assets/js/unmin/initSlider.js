@@ -4,7 +4,7 @@ const totalCount = document.querySelector(".main-slider__total");
 let range = document.querySelector(".main-slider__range-fill");
 
 initOzslider({
-    slider: '.main-slider',
+    slider: '.main-slider__real',
     slide: '.main-slider__slide',
     sliderTrack: '.main-slider__track',
     nextBtn: '.main-slider__next',
