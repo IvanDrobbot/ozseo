@@ -179,12 +179,13 @@
         </div>
     </div>
 
-    <a href="#" class="left-btn blind-btn open-modal">
+    <a href="#" class="left-btn blind-btn open-modal-2">
         <span class="blind__element"></span>
         <span>Заказать каталог</span>
     </a>
 
     <div class="modal">
+        <div class="modal__blur"></div>
         <div class="modal__bg close-modal"></div>
         <div class="modal__body">
             <div class="modal__popup">
@@ -224,8 +225,59 @@
         </div>
     </div>
 
-    <div class="widget open-modal">
-        <div class="widget-btn">
+    <div class="modal modal-2">
+        <div class="modal__blur"></div>
+        <div class="modal__bg close-modal-2"></div>
+
+        <div class="modal__body">
+            <div class="modal__popup">
+                <div class="modal__btn close-modal-2">
+                    <svg viewBox="0 0 32 32"><path d="M10,10 L22,22 M22,10 L10,22"></path></svg>
+                </div>
+                <div class="modal__head">
+                    <p class="modal__title form-title">Получить каталог</p>
+                    <p class="modal__des des-title">Создаем индивидуальный проект под вас и показываем, как он будет выглядеть визуально</p>
+                </div>
+                
+                <form action="#sfksf" class="modal__form check-form2">
+                    <div class="modal__item input__wrap">
+                        <input type="text" class="input modal__input" placeholder=" ">
+                        <label class="input-holder modal__input-holder">Имя</label>
+                    </div>
+                    <div class="modal__item input__wrap">
+                        <input type="email" class="check-input2 input modal__input" placeholder=" ">
+                        <label class="input-holder modal__input-holder">E-mail</label>
+                        <span class="check-error2 modal__error">Пожалуйста, заполните поле.</span>
+                    </div>
+                    <div class="modal__item input__wrap">
+                        <textarea class="input modal__input" placeholder=" "></textarea>
+                        <label class="input-holder modal__input-holder">Комментарий</label>
+                    </div>
+                    <button class="check-btn2 modal__submit primary-btn filled"><span>Перезвоните мне</span></button>
+
+                    <div class="modal__agreement">
+                        <input type="checkbox" id="checker2" class="modal__checkbox" checked>
+                        <span class="modal__agreement-text">
+                            Я даю свое согласие на обработку персональных данных и соглашаюсь с 
+                            <a href="#" class="linked-title">политикой конфиденциальности</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <div class="widget__bg close-widget"></div>
+        <div class="widget__icons">
+            <div class="widget__icon open-modal" style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2229%22%20height%3D%2230%22%20viewBox%3D%220%200%2029%2030%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20fill-rule%3D%22evenodd%22%20d%3D%22M21.872%2019.905c-.947-.968-2.13-.968-3.072%200-.718.737-1.256.974-1.962%201.723-.193.206-.356.25-.59.112-.466-.262-.96-.474-1.408-.76-2.082-1.356-3.827-3.098-5.372-5.058-.767-.974-1.45-2.017-1.926-3.19-.096-.238-.078-.394.11-.587.717-.718.96-.98%201.665-1.717.984-1.024.984-2.223-.006-3.253-.56-.586-1.103-1.397-1.56-2.034-.458-.636-.817-1.392-1.403-1.985C5.4%202.2%204.217%202.2%203.275%203.16%202.55%203.9%201.855%204.654%201.12%205.378.438%206.045.093%206.863.02%207.817c-.114%201.556.255%203.023.774%204.453%201.062%202.96%202.68%205.587%204.642%207.997%202.65%203.26%205.813%205.837%209.513%207.698%201.665.836%203.39%201.48%205.268%201.585%201.292.075%202.415-.262%203.314-1.304.616-.712%201.31-1.36%201.962-2.042.966-1.01.972-2.235.012-3.234-1.147-1.192-2.48-1.88-3.634-3.065zm-.49-5.36l.268-.047c.583-.103.953-.707.79-1.295-.465-1.676-1.332-3.193-2.537-4.445-1.288-1.33-2.857-2.254-4.59-2.708-.574-.15-1.148.248-1.23.855l-.038.28c-.07.522.253%201.01.747%201.142%201.326.355%202.53%201.064%203.517%202.086.926.958%201.59%202.125%201.952%203.412.14.5.624.807%201.12.72zm2.56-9.85C21.618%202.292%2018.74.69%2015.56.02c-.56-.117-1.1.283-1.178.868l-.038.28c-.073.537.272%201.04.786%201.15%202.74.584%205.218%201.968%207.217%204.03%201.885%201.95%203.19%204.36%203.803%207.012.122.53.617.873%201.136.78l.265-.046c.57-.1.934-.678.8-1.26-.71-3.08-2.223-5.873-4.41-8.14z%22/%3E%3C/svg%3E');">
+                <span class="widget__icon-alt">Обратный звонок</span>
+            </div>
+            <div class="widget__icon open-modal-2" style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20fill-rule%3D%22evenodd%22%20d%3D%22M22.407%200h-21.1C.586%200%200%20.586%200%201.306v21.1c0%20.72.586%201.306%201.306%201.306h21.1c.72%200%201.306-.586%201.306-1.305V1.297C23.702.587%2023.117%200%2022.407%200zm-9.094%2018.046c0%20.41-.338.737-.738.737H3.9c-.41%200-.738-.337-.738-.737v-1.634c0-.408.337-.737.737-.737h8.675c.41%200%20.738.337.738.737v1.634zm7.246-5.79c0%20.408-.338.737-.738.737H3.89c-.41%200-.737-.338-.737-.737v-1.634c0-.41.337-.737.737-.737h15.923c.41%200%20.738.337.738.737v1.634h.01zm0-5.8c0%20.41-.338.738-.738.738H3.89c-.41%200-.737-.338-.737-.738V4.822c0-.408.337-.737.737-.737h15.923c.41%200%20.738.338.738.737v1.634h.01z%22/%3E%3C/svg%3E');">
+                <span class="widget__icon-alt">Оставить заявку</span>
+            </div>
+        </div>
+        <div class="widget-btn open-widget">
             <div class="widget__pulse"></div>
             <div class="widget__item">
                 <svg class="b24-crm-button-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 30">
@@ -236,6 +288,9 @@
                 <svg class="b24-crm-button-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 28">
                     <path class="b24-crm-button-webform-icon" fill=" #ffffff" fill-rule="evenodd" d="M815.406703,961 L794.305503,961 C793.586144,961 793,961.586144 793,962.305503 L793,983.406703 C793,984.126062 793.586144,984.712206 794.305503,984.712206 L815.406703,984.712206 C816.126062,984.712206 816.712206,984.126062 816.712206,983.406703 L816.712206,962.296623 C816.703325,961.586144 816.117181,961 815.406703,961 L815.406703,961 Z M806.312583,979.046143 C806.312583,979.454668 805.975106,979.783264 805.575462,979.783264 L796.898748,979.783264 C796.490224,979.783264 796.161627,979.445787 796.161627,979.046143 L796.161627,977.412044 C796.161627,977.003519 796.499105,976.674923 796.898748,976.674923 L805.575462,976.674923 C805.983987,976.674923 806.312583,977.0124 806.312583,977.412044 L806.312583,979.046143 L806.312583,979.046143 Z M813.55946,973.255747 C813.55946,973.664272 813.221982,973.992868 812.822339,973.992868 L796.889868,973.992868 C796.481343,973.992868 796.152746,973.655391 796.152746,973.255747 L796.152746,971.621647 C796.152746,971.213122 796.490224,970.884526 796.889868,970.884526 L812.813458,970.884526 C813.221982,970.884526 813.550579,971.222003 813.550579,971.621647 L813.550579,973.255747 L813.55946,973.255747 Z M813.55946,967.45647 C813.55946,967.864994 813.221982,968.193591 812.822339,968.193591 L796.889868,968.193591 C796.481343,968.193591 796.152746,967.856114 796.152746,967.45647 L796.152746,965.82237 C796.152746,965.413845 796.490224,965.085249 796.889868,965.085249 L812.813458,965.085249 C813.221982,965.085249 813.550579,965.422726 813.550579,965.82237 L813.550579,967.45647 L813.55946,967.45647 Z" transform="translate(-793 -961)"></path>
                 </svg>
+            </div>
+            <div class="widget__item">
+                <svg class="b24-widget-button-icon b24-widget-button-close-item" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29"><path fill="#FFF" fill-rule="evenodd" d="M18.866 14.45l9.58-9.582L24.03.448l-9.587 9.58L4.873.447.455 4.866l9.575 9.587-9.583 9.57 4.418 4.42 9.58-9.577 9.58 9.58 4.42-4.42"></path></svg>
             </div>
         </div>
     </div>
@@ -438,10 +493,10 @@
                 </p>
                 <p class="ezkiz__des">Создаем индивидуальный проект под вас и показываем, как он будет выглядеть визуально</p>
 
-                <a href="#" class="primary-btn blind-btn pm ezkiz__btn animate__fadeInUp wow">
+                <div class="primary-btn blind-btn pm ezkiz__btn open-modal-2 animate__fadeInUp wow">
                     <span class="blind__element"></span>
                     <span>Получить эскиз</span>
-                </a>
+                </div>
                 <div class="ezkiz__bottom column">
                     <del class="ezkiz__p">69%</del>
                     <span class="ezkiz__des-client">клиентов обратились к нам повторно после единичного сотрудничества</span>
@@ -678,10 +733,10 @@
                     </span>
                 </div>
                 <div class="calc__btn-wrap">
-                    <a href="#" class="btn calc__btn primary-btn blind-btn pmd">
+                    <div class="btn calc__btn primary-btn blind-btn pmd open-modal-2">
                         <span class="blind__element"></span>
                         <span>Получить эскиз</span>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
