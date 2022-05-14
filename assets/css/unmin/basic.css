@@ -838,7 +838,27 @@ em {
   right: 50px;
   bottom: 50px;
   cursor: pointer;
+  animation-name: introduceWidget;
+  animation-duration: 15s;
+  opacity: 1;
   transition: 0.25s all ease-in-out;
+}
+@keyframes introduceWidget {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  94% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.5;
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 1;
+  }
 }
 .widget__pulse {
   border: 1px solid var(--tertiary-clr);
