@@ -779,19 +779,60 @@ em {
 
 .widget {
   position: fixed;
-  right: 50px;
-  bottom: 50px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   z-index: 100;
+}
+.widget.active .widget__bg {
+  opacity: 1;
+  visibility: visible;
+}
+.widget.active .widget__item:nth-child(2), .widget.active .widget__item:nth-child(3) {
+  animation: none;
+  opacity: 0;
+}
+.widget.active .widget__item:nth-child(4) {
+  opacity: 1;
+}
+.widget.active .widget__icons {
+  opacity: 1;
+  bottom: 110px;
+}
+.widget.active .widget-btn {
+  background-color: #d6d6d6;
+  transform: scale(0.7) rotate(90deg);
+  box-shadow: 0 0 0 8px rgba(214, 214, 214, 0.2);
+  cursor: pointer;
+}
+.widget.active .widget__pulse {
+  animation: none;
+  opacity: 0;
+}
+.widget__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(33, 33, 33, 0.3);
+  transition: 0.25s all ease-in-out;
 }
 .widget-btn {
   background-color: var(--tertiary-clr);
   width: 66px;
   height: 66px;
   border-radius: 50%;
-  position: relative;
+  position: absolute;
   transform: scale(0.85);
   box-shadow: 0 0 0 8px var(--tetriary-accent-clr);
+  right: 50px;
+  bottom: 50px;
   cursor: pointer;
+  transition: 0.25s all ease-in-out;
 }
 .widget__pulse {
   border: 1px solid var(--tertiary-clr);
@@ -853,6 +894,65 @@ em {
     opacity: 0;
   }
 }
+.widget__item:nth-child(4) {
+  opacity: 0;
+}
+.widget__icons {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  height: calc(100vh - 110px);
+  visibility: visible;
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  opacity: 0;
+  transition: 0.25s all ease-in-out;
+}
+.widget__icon {
+  background-color: var(--tertiary-clr);
+  margin: 0 10px 10px 0;
+  width: 45px;
+  height: 44px;
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 8px 6px -6px rgba(33, 33, 33, 0.2);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: 43%;
+  background-position: center;
+  transition: box-shadow 0.17s cubic-bezier(0, 0, 0.2, 1);
+}
+.widget__icon:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
+}
+.widget__icon:hover .widget__icon-alt {
+  opacity: 1;
+}
+.widget__icon-alt {
+  left: -5px;
+  transform: translate(-100%, -50%);
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  padding: 5px 10px;
+  max-width: 360px;
+  border-radius: 1rem;
+  color: var(--sable-clr);
+  background: var(--main-clr);
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.25s all ease-in-out;
+}
 
 .vl-r {
   border-right: 1px solid var(--dull-accent-clr);
@@ -892,6 +992,11 @@ em {
 .dropdown__item {
   display: block;
   margin-left: 0.5rem;
+  border-radius: 3px;
+  transition: 0.1s all ease-in-out;
+}
+.dropdown__item:hover {
+  background-color: #f7f8f8;
 }
 .dropdown__link {
   display: inline-block;
@@ -1329,6 +1434,15 @@ textarea.input {
 .modal__des {
   margin: 1rem 0 2rem;
 }
+.modal__blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99992;
+  backdrop-filter: blur(3px);
+}
 .modal__bg {
   top: 0;
   left: 0;
@@ -1354,6 +1468,8 @@ textarea.input {
   margin: 0 auto;
   padding: 3rem;
   z-index: 99994;
+  overflow-y: auto;
+  max-height: 95vh;
 }
 .modal__btn {
   color: #555;
@@ -1649,7 +1765,7 @@ textarea.input {
 @media (max-width: 1820px) {
   .gallery__item {
     min-width: 14.2857142857vw;
-    min-height: 20vh;
+    min-height: max(20vh, 14.2857142857vw);
   }
 }
 @media (max-width: 767px) {
@@ -1676,7 +1792,7 @@ textarea.input {
   background: url(../../img/elements/zoom.webp) no-repeat top;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: calc(100% - var(--item-padding));
   padding-top: 3rem;
   color: var(--main-clr);
   transform: translate(-50%, -50%);
@@ -1736,6 +1852,7 @@ textarea.input {
 }
 .achives__item:hover {
   color: var(--primary-clr);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 .achives__wrap {
   width: 100%;
