@@ -368,7 +368,7 @@
   }
 }
 .achives__item {
-  transition: 0.1s all ease-in-out;
+  transition: 0.25s all ease-in-out;
 }
 .achives__item:hover {
   color: var(--primary-clr);
