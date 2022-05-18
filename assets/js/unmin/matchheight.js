@@ -6,6 +6,10 @@ function matchHeight(els){
         var arrayLength = getDivs.length;
         var heights = [];
 
+        if(getDivs.style.height.length > 2 && getDivs.style.height !== "auto"){
+            return;
+        }
+
         //Create a loop that iterates through the getDivs variable and pushes the heights of the divs into an empty array
         for (var i = 0; i < arrayLength; i++) {
             getDivs[i].style.height = "auto";
