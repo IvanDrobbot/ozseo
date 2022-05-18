@@ -1389,6 +1389,10 @@ textarea.input {
   height: auto;
 }
 
+img:not([src]):not([srcset]) {
+  visibility: hidden;
+}
+
 .img-wrap {
   position: absolute;
   top: 0;
@@ -1776,7 +1780,7 @@ textarea.input {
   padding: 3rem;
   z-index: 99994;
   overflow-y: auto;
-  max-height: 95vh;
+  max-height: 95%;
 }
 .modal__btn {
   color: #555;

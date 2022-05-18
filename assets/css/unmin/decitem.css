@@ -358,7 +358,11 @@
     text-indent: initial !important;
   }
 }
+.feed-slider .feed-prev {
+  z-index: 2;
+}
 .feed-slider .feed-next {
+  z-index: 1;
   margin-left: 12.5rem;
 }
 @media (max-width: 767px) {
