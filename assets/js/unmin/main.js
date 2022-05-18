@@ -1,6 +1,8 @@
 const exAutoHeight = document.querySelectorAll(".ex-auto");
 const prodAutoHeight = document.querySelectorAll(".prod-auto");
 const footerAutoHeight = document.querySelectorAll(".footer-auto");
+const galleryOpen = document.querySelector(".gallery-active");
+const galleryClose = document.querySelector(".gallery-hidden");
 const gallery = document.querySelector(".gallery");
 
 
@@ -18,6 +20,13 @@ let wow = new WOW({
 );
 wow.init();
 
-gallery.addEventListener("click", () => {
-    gallery.classList.toggle("active");
+galleryOpen.addEventListener("click", () => {
+    if(!gallery.classList.contains("active")){
+        gallery.classList.add("active");
+    }
+});
+galleryClose.addEventListener("click", () => {
+    if(gallery.classList.contains("active")){
+        gallery.classList.remove("active");
+    }
 });
