@@ -27,6 +27,7 @@ function matchHeight(els){
 
     }
 
-    window.addEventListener("DOMContentLoaded", matchme, false);
-    window.addEventListener("resize", matchme, false);
+    document.addEventListener("DOMContentLoaded", matchme);
+    document.addEventListener("scroll", matchme);
+    window.addEventListener("resize", matchme);
 }
